@@ -2,6 +2,7 @@ package com.cab.service;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class TripService implements TripServiceInterface {
 		tripBooking.setBill(tripBooking.getDistanceInKm() * cab.getPerKmRate());
 		tripBooking.setStatus(TripStatus.CONFIRMED);
 		
-		tripBooking.setFromDateTime(LocalDate.now());
+		tripBooking.setFromDateTime(LocalDate.now());;
 		
 //		tripBooking.setToDateTime(LocalDateTime.now());
 		
