@@ -1,0 +1,403 @@
+{
+	"info": {
+		"_postman_id": "289a5cee-ebaa-4f63-99b4-391b9a965cab",
+		"name": "Cab Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21143805"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"name\": \"abcdefghij\",\n    \"password\": \"user12345\",\n    \"email\": \"user@email.com\",\n    \"mobileNo\": \"1234589789\",\n    \"roles\": [\"USER\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user\",\n    \"password\": \"user12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User logged in?",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/login/58",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"login",
+								"58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/logout/58",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"logout",
+								"58"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"name\": \"Admin\",\n    \"password\": \"admin123456\",\n    \"email\": \"admin@email.com\",\n    \"mobileNo\": \"9874563210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/admins",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admins",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admins/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"adminbad\",\n    \"name\": \"Admin bad\",\n    \"password\": \"admin123456\",\n    \"email\": \"adminbad@email.com\",\n    \"mobileNo\": \"9874563210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/admins/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admins",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/admins/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"admins",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cab and Driver",
+			"item": [
+				{
+					"name": "Cab",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cabType\": \"COMPACT\",\n    \"registrationNumber\": \"MIN01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/cabs",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"cabs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all Cab",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/cabs",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"cabs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cab\": {\n        \"cabType\": \"MUV\",\n        \"registrationNumber\": \"MUV001\"\n    },\n    \"dl\": \"DR002\",\n    \"rating\": 4.5,\n    \"username\": \"drivertwo\",\n    \"name\": \"Driver 002\",\n    \"password\": \"driver001\",\n    \"email\": \"driver001@email.com\",\n    \"mobileNo\": \"8795462130\",\n    \"roles\": [\"DRIVER\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/drivers",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"drivers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Driver",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/drivers",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"drivers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"customer\",\n    \"name\": \"Customer\",\n    \"password\": \"customer123456\",\n    \"email\": \"customer@email.com\",\n    \"mobileNo\": \"9874563210\",\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Costomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trip by trip id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/trips/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"trips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
