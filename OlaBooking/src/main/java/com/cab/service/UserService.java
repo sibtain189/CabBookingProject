@@ -23,7 +23,9 @@ public class UserService implements UserServiceInterface {
     
     @Override
     public User saveUser(User user) throws UserException {
-        return userDAO.save(user);
+    	
+    	 User user2 = userDAO.save(user);
+        return user2;
     }
 
     @Override
