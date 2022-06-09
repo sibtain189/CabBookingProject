@@ -25,8 +25,13 @@ public class UserService implements UserServiceInterface {
     public User saveUser(User user) throws UserException {
     	
     	 User user2 = userDAO.save(user);
+    	 
+    	 System.out.println(user2.toString());
+    	 System.out.println("=======================================================================================================================");
+    	 
         return user2;
     }
+    
 
     @Override
     public User updateUser(Integer id, User user) throws UserException {

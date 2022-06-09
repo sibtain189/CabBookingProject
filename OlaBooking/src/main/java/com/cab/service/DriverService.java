@@ -34,6 +34,8 @@ public class DriverService implements DriverServiceInterface {
         
         driver.setCab(cab);
         
+   	 System.out.println("=======================================================================================================================");
+        
         return driverDAO.save(driver);
     }
 

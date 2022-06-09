@@ -24,7 +24,7 @@ import lombok.Data;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue()
 	private Integer userId;
 
 	@Pattern(regexp = "^[a-zA-Z]{3,25}", message = "length must be >=3")
@@ -46,6 +46,6 @@ public class User {
 	private String mobileNo;
 
 	@ElementCollection
-	private List<UserRoles> roles = null;
+	private List<UserRoles> roles;
 
 }
