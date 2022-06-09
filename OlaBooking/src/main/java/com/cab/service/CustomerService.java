@@ -24,9 +24,7 @@ public class CustomerService implements CustomerServiceInterface {
 
     @Override
     public Customer insertCustomer(Customer customer) throws CustomerException {
-    	
-   	 System.out.println("=======================================================================================================================");
-
+    
     	
         return customerRepositry.save(customer);
     }

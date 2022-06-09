@@ -21,7 +21,7 @@ public class UserTrackerService {
     UserTrackerDAO userTrackerDAO;
 
     @Autowired
-    UserDAO userRepository;
+    UserDAO userDAO;
 
     
     
@@ -39,7 +39,7 @@ public class UserTrackerService {
     	
         try {
         	
-			User userDB = userRepository.findByUsername(user.getUsername()).get();
+			User userDB = userDAO.findByUsername(user.getUsername()).get();
 			
             if (userDB == null)
                 throw new UserException("User not found");

@@ -12,12 +12,5 @@
 
 ## Authors
 
-- [Raju Jai](https://www.github.com/rajujai)
+- [Sibtain Ahmad](https://www.github.com/sibtain189)
 
-- [Chirag Jain](https://www.github.com/thezolooo)
-
-- [Pranav R](https://github.com/git-pranavr)
-
-- [Aarti Lather](https://www.github.com/aarti-lather)
-
-- [Ankur Singh](https://www.github.com/ankur310)

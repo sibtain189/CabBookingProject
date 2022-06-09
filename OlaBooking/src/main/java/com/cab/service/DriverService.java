@@ -33,12 +33,11 @@ public class DriverService implements DriverServiceInterface {
         cab.setPerKmRate(cabType.getPrice());
         
         driver.setCab(cab);
-        
-   	 System.out.println("=======================================================================================================================");
-        
+                
         return driverDAO.save(driver);
     }
 
+    
     @Override
     public String getDlByID(Integer id) throws DriverException {
         Driver driver = driverDAO.findById(id).orElseThrow(() -> new DriverException("Driver doesn't exist with id : " + id));

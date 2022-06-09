@@ -12,10 +12,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class UserTracker {
 
+	
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    
     @Column(unique = true)
     private Integer userId;
+    
 }

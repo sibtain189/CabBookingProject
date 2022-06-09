@@ -1,5 +1,6 @@
 package com.cab.service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class TripService implements TripServiceInterface {
 		tripBooking.setBill(tripBooking.getDistanceInKm() * cab.getPerKmRate());
 		tripBooking.setStatus(TripStatus.CONFIRMED);
 		
-		tripBooking.setFromDateTime(LocalDateTime.now());
+		tripBooking.setFromDateTime(LocalDate.now());
 		
 //		tripBooking.setToDateTime(LocalDateTime.now());
 		
@@ -48,7 +49,7 @@ public class TripService implements TripServiceInterface {
 		trip1.setFromLocation(tripBooking.getFromLocation());
 		trip1.setToLocation(tripBooking.getToLocation());
 		trip1.setFromDateTime(tripBooking.getFromDateTime());
-		trip1.setToDateTime(tripBooking.getToDateTime());
+//		trip1.setToDateTime(tripBooking.getToDateTime());
 		trip1.setBill(tripBooking.getBill());
 		trip1.setStatus(tripBooking.getStatus());
 		trip1.setDistanceInKm(tripBooking.getDistanceInKm());
@@ -64,6 +65,7 @@ public class TripService implements TripServiceInterface {
 		return trip1;
 	}
 
+	
 	@Override
 	public List<TripBooking> getAllTripsByCustomer(Integer customerId) throws TripException {
 		List<TripBooking> list = customerServiceInterface.getList(customerId);
