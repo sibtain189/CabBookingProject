@@ -9,33 +9,34 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/cabook/admin")
 public class AdminController {
 
     @Autowired
     private AdminServiceInterface adminServiceInterface;
 
-    @GetMapping("/admins/{id}")
+    @GetMapping("/{id}")
     public Admin getAdmin(@PathVariable("id") Integer id) {
         return adminServiceInterface.getAdmin(id);
     }
 
-    @GetMapping("/admins")
+    @GetMapping("/")
     public List<Admin> getAllAdmins() {
         return adminServiceInterface.getAllAdmins();
     }
 
-    @PostMapping("/admins")
+    @PostMapping("/")
     public Admin insertAdmin(@RequestBody Admin admin) {
         admin.setRoles(List.of(UserRoles.ADMIN));
         return adminServiceInterface.insertAdmin(admin);
     }
 
-    @PutMapping("/admins/{id}")
+    @PutMapping("/{id}")
     public Admin updateAdmin(@PathVariable("id") Integer id, @RequestBody Admin admin) {
         return adminServiceInterface.updateAdmin(id, admin);
     }
 
-    @DeleteMapping("/admins/{id}")
+    @DeleteMapping("/{id}")
     public Admin deleteAdmin(@PathVariable("id") Integer id) {
         return adminServiceInterface.deleteAdmin(id);
     }

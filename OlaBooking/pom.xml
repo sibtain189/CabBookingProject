@@ -11,10 +11,10 @@
 	</parent>
 	
 	<groupId>com.bookmycab</groupId>
-	<artifactId>cabBookingSystem</artifactId>
+	<artifactId>Online-Cab-Booking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CabBookingSystem</name>
-	<description>Demo project for Spring Boot</description>
+	<name>OnlineCabBooking</name>
+	<description>API's generate for one cab booking application</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -68,6 +68,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -82,6 +83,7 @@
 	</dependencies>
 
 	<build>
+	 <finalName>OnlineCabBooking</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

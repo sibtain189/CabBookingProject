@@ -29,10 +29,15 @@ public class TripService implements TripServiceInterface {
 
 	@Override
 	public TripBooking addTrip(TripBooking tripBooking, Integer customerId, Integer driverId) {
+		
 		tripBooking.setCustomer(customerServiceInterface.viewCustomer(customerId));
+		
 		tripBooking.setDriver(driverServiceInterface.getDriverByID(driverId));
+		
 		Driver driver = driverServiceInterface.getDriverByID(driverId);
+		
 		Cab cab = driver.getCab();
+		
 		tripBooking.setBill(tripBooking.getDistanceInKm() * cab.getPerKmRate());
 		tripBooking.setStatus(TripStatus.CONFIRMED);
 		
@@ -45,6 +50,7 @@ public class TripService implements TripServiceInterface {
 
 	@Override
 	public TripBooking updateTrip(Integer id, TripBooking tripBooking) throws TripException {
+		
 		TripBooking trip1 = tripBookingDAO.findById(id)
 				.orElseThrow(() -> new TripException("Trip with id : " + id + " does not exit.."));
 		trip1.setFromLocation(tripBooking.getFromLocation());
