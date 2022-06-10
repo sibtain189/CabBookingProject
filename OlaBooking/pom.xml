@@ -11,7 +11,7 @@
 	</parent>
 	
 	<groupId>com.bookmycab</groupId>
-	<artifactId>Online-Cab-Booking</artifactId>
+	<artifactId>OnlineCabBooking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>OnlineCabBooking</name>
 	<description>API's generate for one cab booking application</description>
