@@ -2,4 +2,4 @@
 
   ## UML Diagram
   
-![Project Diagram](https://user-images.githubusercontent.com/75352528/173233499-9cecfa31-ebff-4fdb-b4f9-2d52935fa58c.jpeg)
+![Project Diagram  (1)](https://user-images.githubusercontent.com/75352528/173234055-3a1bcf4d-281c-4aa6-8e81-53dbc5a46e19.jpeg)
