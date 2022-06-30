@@ -24,7 +24,7 @@ import lombok.Data;
 public class User {
 
 	@Id
-	@GeneratedValue()
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer userId;
 	
 
